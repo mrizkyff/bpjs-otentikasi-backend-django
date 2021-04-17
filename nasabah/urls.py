@@ -1,7 +1,8 @@
 from django.urls import path
 
-from .import views
+from .views import nasabah_list, detail_nasabah
 
 urlpatterns = [
-    path('', views.index),
+    path('', nasabah_list),
+    path('api/<int:id_nasabah>', detail_nasabah),
 ]
